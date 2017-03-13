@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zluo.wheretoeat.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorTitleBar"
+        android:theme="?attr/actionBarTheme"
+        android:elevation="4dp"
+        android:id="@+id/toolbar_main" />
+
+    <Button
+        android:text="Cheapest"
+        android:background="@drawable/circle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/button_middle"
+        android:layout_toLeftOf="@+id/button_middle"
+        android:layout_centerVertical="true"
+        android:id="@+id/button_left" />
+
+    <Button
+        android:text="Best Rating"
+        android:background="@drawable/circle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/button_middle" />
+
+    <Button
+        android:text="Closest"
+        android:background="@drawable/circle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/button_middle"
+        android:layout_toRightOf="@+id/button_middle"
+        android:layout_centerVertical="true"
+        android:id="@+id/button_right" />
+
+    <RadioButton
+        android:text="Random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_go"
+        android:layout_alignLeft="@+id/button_go"
+        android:layout_alignStart="@+id/button_go"
+        android:id="@+id/radioButton" />
+
+    <Button
+        android:text="Eat Here!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button_go" />
+
+</RelativeLayout>
