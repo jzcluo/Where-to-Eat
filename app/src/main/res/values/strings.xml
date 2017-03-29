@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Where to Eat</string>
     <string name="title_activity_maps">Map</string>
+    <string name="display_result">%1$s : %2$s</string>
+    <string name="display_rating_result">%1$s : %2$s(%3$sreviews)</string>
+    <string name="display_distance_result">%1$s : %2$sm</string>
+
+
 </resources>

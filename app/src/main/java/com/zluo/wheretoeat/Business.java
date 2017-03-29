@@ -10,17 +10,18 @@ class Business {
     //emitted unimportant ones
     private String id;
     private List<String> transactions;
-    private double rating;
+    private String rating;
     private String name;
     //private YelpLocation location;
     private String phone;
-    private double distance;
+    private String distance;
     private String image_url;
     private String url;
-    private boolean is_closes;
-    private String display_phone;
+    private Coordinates coordinates;
+    private String is_closed;
+    private List<Categories> categories;
     private String price;
-    private int review_count;
+    private String review_count;
     public Business() {
 
     }
@@ -33,7 +34,7 @@ class Business {
         return transactions;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
@@ -46,7 +47,7 @@ class Business {
         return phone;
     }
 
-    public double getDistance() {
+    public String getDistance() {
         return distance;
     }
 
@@ -58,19 +59,63 @@ class Business {
         return url;
     }
 
-    public boolean is_closes() {
-        return is_closes;
+    public String getLatitude() {
+        return coordinates.getLatitude();
     }
 
-    public String getDisplay_phone() {
-        return display_phone;
+    public String getLongitude() {
+        return coordinates.getLongitude();
+    }
+
+    public String getIs_closed() {
+        return is_closed;
+    }
+
+    public String getCategories() {
+        StringBuilder builder = new StringBuilder();
+        for (Categories category : categories) {
+            builder.append(category.getTitle()).append(", ");
+        }
+        builder.setLength(builder.length() - 2);
+        return builder.toString();
     }
 
     public String getPrice() {
         return price;
     }
 
-    public int getReview_count() {
+    public String getReview_count() {
         return review_count;
+    }
+
+    private class Categories {
+        private String alias;
+        private String title;
+
+        public Categories() {
+
+        }
+
+        public String getAlias() {
+            return alias;
+        }
+        public String getTitle() {
+            return title;
+        }
+    }
+    private class Coordinates {
+        private String latitude;
+        private String longitude;
+
+        public Coordinates() {
+
+        }
+
+        public String getLatitude() {
+            return latitude;
+        }
+        public String getLongitude() {
+            return longitude;
+        }
     }
 }
